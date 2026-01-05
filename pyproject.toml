@@ -1,0 +1,94 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "contextguard"
+dynamic = ["version"]
+description = "State-contracted verification and explainable retrieval gating for agentic RAG."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [
+  { name = "ContextGuard Contributors" }
+]
+keywords = ["rag", "retrieval", "verification", "provenance", "traceability", "llm"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Typing :: Typed",
+]
+dependencies = [
+  "pydantic>=2.6",
+]
+
+[project.optional-dependencies]
+demo = ["graphviz"]  # for DOT->SVG/PNG rendering
+nli = ["sentence-transformers"]  # for NLIJudge (optional)
+llm = ["openai>=1.0.0"]  # for OpenAIProvider (optional)
+cloud = ["boto3>=1.26.0"]  # for S3Store (optional)
+qdrant = ["qdrant-client>=1.7.0"]
+chroma = ["chromadb>=0.5.0"]
+docs = [
+  "mkdocs>=1.6.0",
+  "mkdocs-material>=9.5.0",
+  "mkdocstrings[python]>=0.25.0",
+]
+lint = ["ruff>=0.5"]
+typecheck = ["mypy>=1.8"]
+dev = [
+  "ruff>=0.5",
+  "mypy>=1.8",
+]
+
+[project.urls]
+Homepage = "https://github.com/code-graphers/contextguard"
+Repository = "https://github.com/code-graphers/contextguard"
+Issues = "https://github.com/code-graphers/contextguard/issues"
+
+[tool.hatch.version]
+path = "contextguard/__init__.py"
+
+[tool.hatch.build]
+readme = "README.md"
+exclude = [
+  "/examples/output",
+  "*.dot",
+  "*.svg",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["contextguard"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+extend-exclude = ["examples/output"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+exclude = "examples/output"
+show_error_codes = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+
+[tool.pytest.ini_options]
+markers = [
+  "optional: tests that require optional external dependencies"
+]
+
+

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Project outputs
+examples/output/
+*.dot
+*.svg
+
+
