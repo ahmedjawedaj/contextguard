@@ -3,14 +3,14 @@
 ## Install
 Base:
 ```bash
-pip install contextguard
+pip install llm-contextguard
 ```
 Optional extras:
 ```bash
-pip install contextguard[llm]      # OpenAI provider
-pip install contextguard[qdrant]   # Qdrant adapter
-pip install contextguard[chroma]   # Chroma adapter
-pip install contextguard[cloud]    # S3 store
+pip install llm-contextguard[llm]      # OpenAI provider
+pip install llm-contextguard[qdrant]   # Qdrant adapter
+pip install llm-contextguard[chroma]   # Chroma adapter
+pip install llm-contextguard[cloud]    # S3 store
 ```
 
 ## Minimal sync example

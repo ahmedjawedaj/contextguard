@@ -3,7 +3,7 @@ requires = ["hatchling>=1.21"]
 build-backend = "hatchling.build"
 
 [project]
-name = "contextguard"
+name = "llm-contextguard"
 dynamic = ["version"]
 description = "State-contracted verification and explainable retrieval gating for agentic RAG."
 readme = "README.md"

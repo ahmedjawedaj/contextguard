@@ -50,7 +50,7 @@ Install (when published)
 ------------------------
 Standard install (runtime only):
 ```bash
-pip install contextguard
+pip install llm-contextguard
 ```
 
 From source:
@@ -60,9 +60,9 @@ pip install -e .
 
 Optional extras:
 ```bash
-pip install contextguard[demo]        # graphviz for DOT->SVG/PNG rendering
-pip install contextguard[nli]         # sentence-transformers for NLIJudge
-pip install contextguard[dev]         # ruff + mypy
+pip install llm-contextguard[demo]        # graphviz for DOT->SVG/PNG rendering
+pip install llm-contextguard[nli]         # sentence-transformers for NLIJudge
+pip install llm-contextguard[dev]         # ruff + mypy + pytest
 ```
 
 Programmatic use
@@ -171,7 +171,7 @@ Docs
 ----
 - Built with MkDocs + mkdocstrings. To serve locally:
 ```bash
-pip install contextguard[docs]
+pip install llm-contextguard[docs]
 mkdocs serve
 ```
 
