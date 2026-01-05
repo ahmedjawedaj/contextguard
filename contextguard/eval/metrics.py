@@ -10,7 +10,7 @@ This module provides lightweight, CI-friendly scoring:
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Dict, Iterable, List, Sequence, Tuple
+from typing import Dict, Iterable, Sequence
 
 from ..core.specs import VerdictLabel
 

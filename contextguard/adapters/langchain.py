@@ -64,7 +64,6 @@ def _default_doc_to_chunk(
 
     entity_ids = meta.get("entity_ids") or meta.get("entities") or []
     year = meta.get("year")
-    doc_type = meta.get("doc_type")
 
     provenance = Provenance(
         source_id=source_id,

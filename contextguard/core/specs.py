@@ -15,8 +15,8 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from enum import Enum
-from typing import Any, Dict, List, Literal, Optional, Tuple, Union
-from pydantic import BaseModel, Field, ConfigDict, field_validator
+from typing import Any, Dict, List, Literal, Optional, Tuple
+from pydantic import BaseModel, Field, ConfigDict
 import hashlib
 
 

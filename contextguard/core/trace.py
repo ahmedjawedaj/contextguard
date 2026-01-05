@@ -27,7 +27,6 @@ from enum import Enum
 from typing import Any, Callable, Dict, List, Optional, Set
 import hashlib
 
-from .specs import ReasonCode
 
 
 class NodeKind(str, Enum):
@@ -402,13 +401,13 @@ class TraceGraph:
         how the verdict was derived from evidence through decisions.
         """
         lines = [
-            f'digraph ContextGuard {{',
+            'digraph ContextGuard {',
             f'  label="{title or f"ContextGuard Run {self.run_id}"}"',
-            f'  labelloc="t"',
-            f'  fontsize="16"',
+            '  labelloc="t"',
+            '  fontsize="16"',
             f'  rankdir="{rankdir}"',
-            f'  node [shape=box, fontname="Helvetica", fontsize="10"]',
-            f'  edge [fontname="Helvetica", fontsize="8"]',
+            '  node [shape=box, fontname="Helvetica", fontsize="10"]',
+            '  edge [fontname="Helvetica", fontsize="8"]',
             '',
         ]
         

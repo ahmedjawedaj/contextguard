@@ -1,4 +1,4 @@
-from contextguard.core.trace import TraceGraph, TraceBuilder
+from contextguard.core.trace import TraceGraph
 from contextguard.verify.report import ReportBuilder
 from contextguard.core.specs import StateSpec, VerdictLabel
 

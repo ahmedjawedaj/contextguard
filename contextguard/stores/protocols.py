@@ -15,7 +15,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional, Protocol, runtime_checkable
 
-from ..core.specs import StateSpec, VerdictReport, Claim
+from ..core.specs import StateSpec, VerdictReport
 from ..core.trace import TraceGraph
 
 

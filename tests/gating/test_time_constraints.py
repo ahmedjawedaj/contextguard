@@ -1,4 +1,3 @@
-from datetime import datetime
 
 from contextguard.retrieve.gating import GatingConfig, EvidenceGate
 from contextguard.core.specs import StateSpec, EntityRef, TimeConstraint, Chunk, Provenance, DomainProfile

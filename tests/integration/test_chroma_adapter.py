@@ -1,4 +1,3 @@
-import os
 import pytest
 
 pytestmark = pytest.mark.optional  # mark as optional; requires chromadb
@@ -7,7 +6,7 @@ pytestmark = pytest.mark.optional  # mark as optional; requires chromadb
 @pytest.fixture
 def chroma_adapter():
     chromadb = pytest.importorskip("chromadb")
-    from contextguard import ChromaRetrieverAdapter, CanonicalFilters, SourceType
+    from contextguard import ChromaRetrieverAdapter, SourceType
 
     client = chromadb.Client()
     collection = client.get_or_create_collection("test_docs")

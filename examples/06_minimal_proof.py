@@ -24,13 +24,12 @@ from contextguard import (
     RuleBasedJudge,
     StateSpec,
     TimeConstraint,
-    VerdictLabel,
     aggregate_claim,
     aggregate_overall,
     gate_chunks,
     plan_retrieval,
 )
-from contextguard.core.specs import ReasonCode, SourceType
+from contextguard.core.specs import SourceType
 from contextguard.core.trace import TraceBuilder
 
 

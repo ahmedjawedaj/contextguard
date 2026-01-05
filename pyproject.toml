@@ -75,6 +75,10 @@ line-length = 100
 target-version = "py39"
 extend-exclude = ["examples/output"]
 
+[tool.ruff.lint]
+# Ignore unused imports in __init__.py (re-exports) and unused vars in examples
+per-file-ignores = { "__init__.py" = ["F401"], "examples/*.py" = ["F841"] }
+
 [tool.ruff.format]
 quote-style = "double"
 

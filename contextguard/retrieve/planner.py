@@ -22,7 +22,6 @@ import hashlib
 from ..core.specs import (
     StateSpec,
     Claim,
-    TimeConstraint,
     DomainProfile,
 )
 from ..core import settings

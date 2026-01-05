@@ -17,7 +17,7 @@ Key design decisions:
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Set, Tuple
 import math
 
@@ -26,7 +26,6 @@ from ..core.specs import (
     ClaimVerdict,
     VerdictLabel,
     EvidenceAssessment,
-    EvidenceRole,
     ReasonCode,
     Chunk,
     Provenance,

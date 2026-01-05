@@ -23,7 +23,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
-from typing import Any, Callable, Dict, List, Optional, Set, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 import re
 
 from ..core.specs import (
@@ -31,7 +31,6 @@ from ..core.specs import (
     StateSpec,
     GateDecision,
     ReasonCode,
-    SourceType,
     DomainProfile,
 )
 from ..core.trace import TraceBuilder
@@ -330,7 +329,6 @@ class EvidenceGate:
             return matched or not self.config.require_entity_match, matched
         
         # Chunk has no entity info - do text matching
-        text_lower = chunk.text.lower()
         for entity in state.entities:
             if entity.matches_text(chunk.text):
                 return True, True

@@ -22,7 +22,6 @@ from contextguard import (
     aggregate_claim,
     aggregate_overall,
     build_report,
-    VerdictLabel,
     MockRetriever,
 )
 

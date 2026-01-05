@@ -29,22 +29,17 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from contextguard.core.specs import (
-    StateSpec,
     StateDelta,
     EntityRef,
     TimeConstraint,
     SourcePolicy,
     SourceType,
     Claim,
-    Chunk,
-    Provenance,
-    VerdictLabel,
-    ReasonCode,
 )
 from contextguard.core.merge import merge_state, create_initial_state
-from contextguard.core.trace import TraceGraph, TraceBuilder, NodeKind, NodeOp
+from contextguard.core.trace import TraceBuilder
 from contextguard.retrieve.protocols import MockRetriever
-from contextguard.retrieve.planner import plan_retrieval, RetrievalPlanner
+from contextguard.retrieve.planner import plan_retrieval
 from contextguard.retrieve.gating import gate_chunks, summarize_gating
 from contextguard.verify.claim_splitter import RuleBasedClaimSplitter
 from contextguard.verify.judges import RuleBasedJudge
@@ -178,7 +173,7 @@ def run_multi_turn_verification():
         parents=[delta1_id],
     )
     
-    print(f"State after Turn 1:")
+    print("State after Turn 1:")
     print(f"  Entities: {[e.entity_id for e in state.entities]}")
     print(f"  Metric: {state.metric}")
     
@@ -212,7 +207,7 @@ def run_multi_turn_verification():
         parents=[delta2_id],
     )
     
-    print(f"State after Turn 2 (entities carried forward!):")
+    print("State after Turn 2 (entities carried forward!):")
     print(f"  Entities: {[e.entity_id for e in state.entities]}")
     print(f"  Year: {state.time.year}")
     print(f"  Metric: {state.metric}")
@@ -253,7 +248,7 @@ def run_multi_turn_verification():
         parents=[delta3_id],
     )
     
-    print(f"State after Turn 3 (all constraints accumulated!):")
+    print("State after Turn 3 (all constraints accumulated!):")
     print(f"  Entities: {[e.entity_id for e in state.entities]}")
     print(f"  Year: {state.time.year}")
     print(f"  Metric: {state.metric}")
@@ -293,7 +288,7 @@ def run_multi_turn_verification():
     # Plan retrieval
     plan = plan_retrieval(claims, state, total_k=20)
     
-    print(f"Retrieval Plan:")
+    print("Retrieval Plan:")
     print(f"  Total steps: {len(plan.steps)}")
     print(f"  Support queries: {len(plan.get_support_steps())}")
     print(f"  Counter queries: {len(plan.get_counter_steps())}")
@@ -327,7 +322,7 @@ def run_multi_turn_verification():
     gated = gate_chunks([c for c, _ in all_chunks], state)
     gating_summary = summarize_gating(gated)
     
-    print(f"\nGating Results:")
+    print("\nGating Results:")
     print(f"  Accepted: {gating_summary['accepted']}")
     print(f"  Rejected: {gating_summary['rejected']}")
     print(f"  Rejection reasons: {gating_summary['rejection_reasons']}")

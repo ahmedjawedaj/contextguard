@@ -18,7 +18,7 @@ Customization / extension points:
 from __future__ import annotations
 
 import asyncio
-from typing import List, Optional, Tuple
+from typing import Any, List, Optional, Tuple
 import time
 
 from ..core.specs import Claim, ClaimVerdict, StateSpec, VerdictLabel

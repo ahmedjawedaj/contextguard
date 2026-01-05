@@ -15,12 +15,11 @@ Bad claim splitting → bad verification.
 from __future__ import annotations
 
 import hashlib
-import json
 import re
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional, Protocol, runtime_checkable
 
-from ..core.specs import Claim, TimeConstraint, UnitConstraint, ReasonCode
+from ..core.specs import Claim, TimeConstraint, UnitConstraint
 
 
 # =============================================================================
@@ -183,7 +182,7 @@ Return JSON only. No markdown."""
         try:
             response = self.llm.complete_json(prompt, schema, temperature=0.0)
             return self._parse_response(response)
-        except Exception as e:
+        except Exception:
             # Fallback to simple splitting
             return self._fallback_split(text)
     

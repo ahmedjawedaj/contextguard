@@ -130,16 +130,16 @@ class ReportBuilder:
         # Overall verdict
         if label == VerdictLabel.SUPPORTED:
             lines.append(f"**SUPPORTED** (confidence: {confidence:.0%})")
-            lines.append(f"The content is supported by the available evidence.")
+            lines.append("The content is supported by the available evidence.")
         elif label == VerdictLabel.CONTRADICTED:
             lines.append(f"**CONTRADICTED** (confidence: {confidence:.0%})")
-            lines.append(f"The content is contradicted by the available evidence.")
+            lines.append("The content is contradicted by the available evidence.")
         elif label == VerdictLabel.MIXED:
             lines.append(f"**MIXED** (confidence: {confidence:.0%})")
-            lines.append(f"The evidence presents conflicting information.")
+            lines.append("The evidence presents conflicting information.")
         else:
             lines.append(f"**INSUFFICIENT EVIDENCE** (confidence: {confidence:.0%})")
-            lines.append(f"Not enough evidence to verify the content.")
+            lines.append("Not enough evidence to verify the content.")
         
         # Breakdown
         lines.append("")

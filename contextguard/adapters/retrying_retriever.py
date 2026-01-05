@@ -18,7 +18,6 @@ import time
 from typing import Optional
 
 from ..retrieve.protocols import Retriever, CanonicalFilters
-from ..core.specs import Chunk
 
 
 class RetryingRetriever(Retriever):

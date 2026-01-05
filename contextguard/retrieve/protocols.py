@@ -467,7 +467,7 @@ class FederatedRetriever(RetrieverBase):
                     k=per_retriever_k,
                 )
                 all_results.extend(chunks)
-            except Exception as e:
+            except Exception:
                 # Log but continue with other retrievers
                 # In production, you'd want proper logging here
                 pass

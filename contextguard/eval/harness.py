@@ -29,7 +29,6 @@ from contextguard import (
     gate_chunks,
     RuleBasedJudge,
     aggregate_claim,
-    aggregate_overall,
     VerdictLabel,
     MockRetriever,
 )

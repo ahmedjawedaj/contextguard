@@ -10,7 +10,6 @@ from contextguard.core.specs import (
     Chunk,
     Provenance,
     GateDecision,
-    EntityRef,
 )
 
 
