@@ -49,6 +49,7 @@ typecheck = ["mypy>=1.8"]
 dev = [
   "ruff>=0.5",
   "mypy>=1.8",
+  "pytest>=7.0",
 ]
 
 [project.urls]
