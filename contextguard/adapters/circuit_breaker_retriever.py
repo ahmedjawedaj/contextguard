@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import logging
 import time
-from typing import Optional
+from typing import Callable, Optional
 import asyncio
 
 from ..retrieve.protocols import Retriever, CanonicalFilters
@@ -29,7 +29,7 @@ class CircuitBreakerRetriever(Retriever):
         reset_timeout: float = 5.0,
         max_in_flight: Optional[int] = None,
         logger: Optional[logging.Logger] = None,
-        time_fn: Optional[callable] = None,
+        time_fn: Optional[Callable[[], float]] = None,
     ):
         self.retriever = retriever
         self.failure_threshold = max(1, failure_threshold)

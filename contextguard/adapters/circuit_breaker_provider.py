@@ -13,7 +13,7 @@ from __future__ import annotations
 import asyncio
 import logging
 import time
-from typing import Any, Dict, Optional
+from typing import Any, Callable, Dict, Optional
 
 from ..verify.judges import LLMProviderBase
 
@@ -29,7 +29,7 @@ class CircuitBreakerProvider(LLMProviderBase):
         reset_timeout: float = 5.0,
         max_in_flight: Optional[int] = None,
         logger: Optional[logging.Logger] = None,
-        time_fn: Optional[callable] = None,
+        time_fn: Optional[Callable[[], float]] = None,
     ):
         self.provider = provider
         self.failure_threshold = max(1, failure_threshold)
