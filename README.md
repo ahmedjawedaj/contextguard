@@ -1,8 +1,8 @@
 ContextGuard: State-Contracted Verification for Agentic RAG
 ===========================================================
-[![CI](https://img.shields.io/github/actions/workflow/status/code-graphers/contextguard/ci.yml?branch=main)](https://github.com/code-graphers/contextguard/actions/workflows/ci.yml)
-[![Docs](https://img.shields.io/badge/docs-mkdocs--material-blue)](https://github.com/code-graphers/contextguard/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/contextguard)](https://pypi.org/project/contextguard/)
+[![CI](https://img.shields.io/github/actions/workflow/status/ahmedjawedaj/contextguard/ci.yml?branch=main)](https://github.com/ahmedjawedaj/contextguard/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-mkdocs--material-blue)](https://ahmedjawedaj.github.io/contextguard/)
+[![PyPI](https://img.shields.io/pypi/v/llm-contextguard)](https://pypi.org/project/llm-contextguard/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ContextGuard is a text-only verification and consistency engine. It treats multi-turn RAG and fact-checking like a compiler:
